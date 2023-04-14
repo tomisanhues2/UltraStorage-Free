@@ -1,0 +1,46 @@
+#####################
+# AUTO-SELL SECTION #
+#####################
+# Set the plugin to automatically get the price of the item from the economy plugin
+# You MUST have an economy plugin installed for this to work
+#ALTERNATIVES:
+#  - "ShopGUIPlus"
+#  - "CMI"
+#  - "Essentials"
+#  - "EconomyShopGUI"
+shop-economy-plugin: "ShopGUIPlus" #Disabled in free version!
+
+#########################
+# PHYSICAL ITEM SECTION #
+#########################
+
+ultrastorage-physical-chest-item-name: "&4&lUltraChest"
+ultrastorage-physical-chest-item-lore: "&2&oUltraChests are the best way to store your items!"
+
+# This crafting recipe will only be enabled if enable-crafting-recipe is set to true
+#  - "ABC"
+#  - "DEF"
+#  - "GHI"
+#To leave a slot empty use " "
+#Do not change the order of the letters
+enable-crafting-recipe: false #Disabled in free version!
+crafting-recipe:
+  A: "DIAMOND"
+  B: "DIAMOND"
+  C: "DIAMOND"
+  D: "DIAMOND"
+  E: "CHEST"
+  F: "DIAMOND"
+  G: "DIAMOND"
+  H: "DIAMOND"
+  I: "DIAMOND"
+
+#These items will be added to the menu for players to add them to the chest filter. Any items outside of this list will not be available.
+gui-item-filter-allowed-items:
+  - "DIAMOND"
+  - "IRON_INGOT"
+  - "GOLD_INGOT"
+  - "EMERALD"
+  - "REDSTONE"
+  - "LAPIS_LAZULI"
+  - "DIRT"

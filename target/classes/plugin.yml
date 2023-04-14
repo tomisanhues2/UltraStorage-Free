@@ -1,0 +1,8 @@
+name: UltraStorage-Free
+version: '2.0'
+main: me.tomisanhues2.ultrastorage.UltraStorage
+author: Tomisanhues2
+api-version: 1.14
+depend:
+  - DecentHolograms
+  - Vault
