@@ -1,0 +1,510 @@
+####################
+# HOLOGRAM SECTION #
+####################
+# AVAILABLE PLACEHOLDERS UNTIL YOU SEE A NEW PLACEHOLDER LIST
+# %owner% -> Owner of the ultrachest
+# %time_left% -> Time left for autosell to execute
+# %auto_sell_enabled% -> Currently gives "Active" or "No". Tell me to change
+# %block_collection_enabled% -> Currently gives "Active" or "No". Tell me to change
+# %mob_kill_collection_enabled% -> Currently gives "Active" or "No". Tell me to change
+# %mob_other_collection_enabled% -> Currently gives "Active" or "No". Tell me to change
+# %furnace_collection_enabled% -> Currently gives "Active" or "No". Tell me to change
+# %crop_collection_enabled% -> Currently gives "Active" or "No". Tell me to change
+# %slot_count% -> Current amount of used slots in the chest
+# %storage_count% -> Current amount of used storage in the chest. sum of all items.
+# %user_count% -> Current amount of users that can access the chest
+# All the placeholders below with the word TIER return a roman numeral for the tier NUMBER
+# All the placeholders below with the word VALUE return a number for the actual VALUE of given upgrade
+#
+# %current_upgrade_slot_tier%
+# %current_upgrade_slot_value%
+# %next_upgrade_slot_tier%
+# %next_upgrade_slot_value%
+# %next_upgrade_slot_price%
+# %next_upgrade_slot_permission%
+#
+# %current_upgrade_storage_tier%
+# %current_upgrade_storage_value%
+# %next_upgrade_storage_tier%
+# %next_upgrade_storage_value%
+# %next_upgrade_storage_price%
+# %next_upgrade_storage_permission%
+#
+# %current_upgrade_speed_tier%
+# %current_upgrade_speed_value%
+# %next_upgrade_speed_tier%
+# %next_upgrade_speed_value%
+# %next_upgrade_speed_price%
+# %next_upgrade_speed_permission%
+#
+# %current_upgrade_multiplier_tier%
+# %current_upgrade_multiplier_value%
+# %next_upgrade__multiplier_tier%
+# %next_upgrade__multiplier_value%
+# %next_upgrade__multiplier_price%
+# %next_upgrade__multiplier_permission%
+
+# %current_upgrade_members_tier%
+# %current_upgrade_members_value%
+# %next_upgrade_members_tier%
+# %next_upgrade_members_value%
+# %next_upgrade_members_price%
+# %next_upgrade_members_permission%
+
+# %current_upgrade_sell_quantity_tier%
+# %current_upgrade_sell_quantity_value%
+# %next_upgrade_sell_quantity_tier%
+# %next_upgrade_sell_quantity_value%
+# %next_upgrade_sell_quantity_price%
+# %next_upgrade_sell_quantity_permission%
+
+
+#[!] IMPORTANT
+#[!] ALL HOLOGRAMS MUST HAVE THE SAME AMOUNT OF LINES
+ultrastorage-hologram-main-page:
+  - '&c%owner% &4&lUltraChest &8(&fTiers&8)'
+  - ''
+  - '&c| &fUpgrade &4%current_upgrade_slot_tier% '
+  - '&c| &fStorage &4%current_upgrade_storage_tier% '
+  - '&c| &fSpeed &4%current_upgrade_speed_tier%'
+  - '&c| &fMultiplier &4%current_upgrade_multiplier_tier%'
+  - '&c| &fMembers &4%current_upgrade_members_tier%'
+  - '&c| &fSell Quantity &4%current_upgrade_sell_quantity_tier%'
+  - ''
+  - '&c| &fAuto-sell Timer: &4&l%time_left%s'
+  - ''
+  - ''
+  - '&7&oClick me to switch pages'
+  - '&7&oRight-Click to Open UltraChest'
+ultrastorage-hologram-settings-page:
+  - '&c%owner% &4&lUltraChest &8(&fSettings&8)'
+  - ''
+  - '&c| &fAuto-Sell: &a%auto_sell_enabled%'
+  - '&c| &fBlock Collection: &a%block_collection%'
+  - '&c| &fMob by kill Collection: &a%mob_collection%'
+  - '&c| &fMob by other Collection: &a%mob_other_collection%'
+  - '&c| &fFurnace Collection: &a%furnace_collection%'
+  - '&c| &fCrop Collection: &a%crop_collection%'
+  - ''
+  - '&c| &fAuto-sell Timer: &4&l%time_left%s'
+  - ''
+  - ''
+  - '&7&oClick me to switch pages'
+  - '&7&oRight-Click to Open UltraChest'
+ultrastorage-hologram-info-page:
+  - '&c%owner% &4&lUltraChest &8(&fInfo&8)'
+  - ''
+  - '&c| &fSlot Capacity: &4%slot_count%/%current_upgrade_slot_value%'
+  - '&c| &fStorage Capacity: &4%storage_count%/%current_upgrade_storage_value%'
+  - '&c| &fMember Slots: &4%user_count%/%current_upgrade_members_value%'
+  - '&c| &fSpeed Value: &4%current_upgrade_speed_value% seconds'
+  - '&c| &fMultiplier: &4%current_upgrade_multiplier_value%x'
+  - '&c| &fSell Quantity: &4%current_upgrade_sell_quantity_value% each'
+  - ''
+  - '&c| &fAuto-sell Timer: &4&l%time_left%s'
+  - ''
+  - ''
+  - '&7&oClick me to switch pages'
+  - '&7&oRight-Click to Open UltraChest'
+
+# HOLOGRAMS FOR THE SHOP
+# %price% -> Price of the item placeholder
+# /usa shop create/remove <price>
+ultrachest-hologram-shop:
+  - '&c&lUltraChest Shop'
+  - '&7&oPrice: &a&l%price%'
+  - ''
+  - ''
+  - '&7&oRight-Click to &c&lbuy &7&oUltraChest'
+
+
+#########################
+# GUI MAIN MENU SECTION #
+#########################
+
+# AVAILABLE PLACEHOLDERS FOR THIS SECTION
+# SAME AS SECTION ABOVE WITH THE FOLLOWING ADDED ONES
+# %item% -> Item Name
+# %item_amount% -> Item quantity
+# %item_price% -> Item price per stack, 64 items.
+
+gui-main-menu-info-item:
+  material: 'ENCHANTED_BOOK'
+  name: '&5&l[&d&l!&5&l] &d&lChest Information'
+  lore:
+    - '&5&l[&d&l!&5&l] &d&lChest Information'
+    - ''
+    - '&c| &fSlot Capacity: &4%slot_count%/%current_upgrade_slot_value%'
+    - '&c| &fStorage Capacity: &4%storage_count%/%current_upgrade_storage_value%'
+    - '&c| &fMember Slots: &4%user_count%/%current_upgrade_members_value%'
+    - '&c| &fSpeed Value: &4%current_upgrade_speed_value% seconds'
+    - '&c| &fMultiplier: &4%current_upgrade_multiplier_value%x'
+    - '&c| &fSell Quantity: &4%current_upgrade_sell_quantity_value% each'
+    - ''
+    - ''
+gui-main-menu-item-default-item:
+  lore:
+    - '&a&l%item%'
+    - ''
+    - '&3| &bQuantity: &3%item_amount%'
+    - '&2| &aSale Price per 64: $&2%sale_price%'
+    - ''
+    - ''
+    - '&c&l[LEFT CLICK] &7To collect &c&l1x &7of this item'
+    - '&c&l[RIGHT CLICK] &7To collect &c&l64x &7of this item'
+    - ''
+gui-main-menu-settings-item:
+  material: 'REDSTONE_COMPARATOR'
+  name: '&4&l[&c&l!&4&l] &c&lChest Settings'
+  lore:
+    - '&4&l[&c&l!&4&l] &c&lSettings Menu'
+    - ''
+    - '&7Click to open the &4Settings Menu'
+    - '&7Here you can do stuff like:'
+    - ''
+    - '&c| &fAdd items to the filter'
+    - '&c| &fAllow players to use this chest'
+    - '&c| &fToggle collection systems'
+    - '&c| &fMore stuff here soon!'
+    - ''
+gui-main-menu-upgrade-slots-item:
+  material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDNhOWEwNzFiNDI4M2M3NTYyNjg3NWM3YmFmZDBlZWYxM2IzZGZmNThhZDk2ODBhMTY1Mjg4YTcxNzFjNTYzNSJ9fX0='
+  lore:
+    - '&a&lUpgrade Slots &8(&f%current_upgrade_slot_tier%&8)'
+    - ''
+    - ''
+    - '&7This will upgrade the amount of &bSlots &7for'
+    - '&7this chest so you can store more unique'
+    - '&7items inside of the chest.'
+    - ''
+    - '&8| &fUsed Slots: &a%slot_count%/%current_upgrade_slot_value%'
+    - ''
+    - '&8&o(( &7&oClick to purchase upgrade! &8&o))'
+    - ''
+gui-main-menu-upgrade-storage-item:
+  material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDAwM2E1NjUxYzRkMWY4YTA4YTEwNzAxYjAwNTBmYWEyMmNlYzI2ZmM2Njc3YmUwODgzODA2M2IyYTk3Y2RjZCJ9fX0='
+  lore:
+    - '&a&lUpgrade Storage &8(&f%current_upgrade_storage_tier%&8)'
+    - ''
+    - ''
+    - '&7This will upgrade the &bStorage &7for'
+    - '&7this chest. You can store more items per'
+    - '&7slot in the chest.'
+    - ''
+    - '&8| &fUsed Storage: &a%storage_count%/%current_upgrade_storage_value%'
+    - ''
+    - '&8&o(( &7&oClick to purchase upgrade! &8&o))'
+    - ''
+gui-main-menu-upgrade-speed-item:
+  material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjFmMTdmY2Q2MzgwYTE4NDkwM2ZjMGY0YWM2M2U4Y2ZiODcxZDA0NjQwYTE3YjYwOTE1YWI0MjJiZTBjODk3NiJ9fX0='
+  name: '&a&lUpgrade Speed &8(&f%current_upgrade_speed_tier%&8)'
+  lore:
+    - '&a&lUpgrade Speed &8(&f%current_upgrade_speed_tier%&8)'
+    - ''
+    - ''
+    - '&7This will reduce the &bTime &7for'
+    - '&7this chest to sell items. The chest will'
+    - '&7sell items automatically faster.'
+    - ''
+    - '&8| &fSell Interval: &a%current_upgrade_speed_value%s'
+    - ''
+    - '&8&o(( &7&oClick to purchase upgrade&8&o ))'
+    - ''
+gui-main-menu-upgrade-multiplier-item:
+  material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODdkODg1YjMyYjBkZDJkNmI3ZjFiNTgyYTM0MTg2ZjhhNTM3M2M0NjU4OWEyNzM0MjMxMzJiNDQ4YjgwMzQ2MiJ9fX0='
+  lore:
+    - '&a&lUpgrade Multiplier &8(&f%current_upgrade_multiplier_tier%&8)'
+    - ''
+    - ''
+    - '&7This will increase the &bMultiplier &7for'
+    - '&7this chest. The chest will sell items'
+    - '&7automatically faster and for more profit!'
+    - ''
+    - '&8| &fMultiplier: &a%current_upgrade_multiplier_value%x'
+    - ''
+    - '&8&o(( &7&oClick to purchase upgrade&8&o ))'
+    - ''
+gui-main-menu-upgrade-members-item:
+  material: 'player'
+  lore:
+    - '&a&lUpgrade Members &8(&f%current_upgrade_members_tier%&8)'
+    - ''
+    - ''
+    - '&7This will upgrade the &bMembers &7for'
+    - '&7this chest. You can add more users to'
+    - '&7be able to access the chest.'
+    - ''
+    - '&8| &fMember Slots: &a%user_count%/&a%current_upgrade_members_value%'
+    - ''
+    - '&8&o(( &7&oClick to purchase upgrade&8&o ))'
+    - ''
+gui-main-menu-upgrade-sell-quantity-item:
+  material: 'player'
+  lore:
+    - '&a&lUpgrade Sell quantity &8(&f%current_upgrade_sell_quantity_tier%&8)'
+    - ''
+    - ''
+    - '&7This will upgrade the &bSell Quantity &7for'
+    - '&7this chest. You can add more users to'
+    - '&7be able to access the chest.'
+    - ''
+    - '&8| &fSell Quantity: &a%current_upgrade_sell_quantity_value%'
+    - ''
+    - '&8&o(( &7&oClick to purchase upgrade&8&o ))'
+    - ''
+
+
+
+###########################
+# GUI ITEM FILTER SECTION #
+###########################
+# AVAILABLE PLACEHOLDERS FOR THIS SECTION
+# SAME AS ABOVE SECTION
+# %is_item_in_chest% -> Currently returns "Yes" or "No"
+
+gui-item-filter-item:
+  lore:
+    - '&a&l%item%'
+    - ''
+    - '&7Is this item in the filter? &b%is_item_in_chest%'
+    - ''
+    - '&c&l[LEFT CLICK] &7To remove this item'
+    - '&a&l[RIGHT CLICK] &7To add this item'
+    - ''
+
+
+###########################
+# MEMBER ITEM FILTER SECTION #
+###########################
+# AVAILABLE PLACEHOLDERS FOR THIS SECTION
+# SAME AS ABOVE SECTION
+# %is_member_in_chest% -> Currently returns "Yes" or "No"
+
+gui-member-filter-item:
+  lore:
+    - ''
+    - '&7Is this member in the filter? &b%is_member_in_chest%'
+    - ''
+    - '&c&l[LEFT CLICK] &7To remove this member'
+    - '&a&l[RIGHT CLICK] &7To add this member'
+    - ''
+
+#########################################
+# GUI TOGGLE COLLECTION SYSTEMS SECTION #
+#########################################
+# AVAILABLE PLACEHOLDERS FOR THIS SECTION
+# SAME AS MAIN MENU SECTION
+gui-toggle-autosell:
+  material: 'DIRT'
+  lore:
+    - '&a&lAuto-Sell Toggle'
+    - ''
+    - '&7This will toggle the &bAuto-Sell &7feature'
+    - '&7for this chest. When enabled, items'
+    - '&7in the chest will be sold automatically.'
+    - ''
+    - '&8| &fToggled: %auto_sell_enabled%'
+    - ''
+    - '&8&o(( &7&oClick to toggle Auto-Sell &8&o))'
+
+gui-toggle-blocks:
+  material: 'DIRT_BLOCK'
+  lore:
+    - '&a&lBlock Collection Toggle'
+    - ''
+    - '&7This will toggle the &bBlock Collection &7feature.'
+    - '&7When enabled, all blocks which are in the filter will be'
+    - '&7automatically collected and stored.'
+    - ''
+    - '&8| &fToggled: &a&l%block_collection%'
+    - ''
+    - '&8&o(( &7&oClick to toggle Block Collection &8&o))'
+gui-toggle-mob-kill:
+  material: 'SPIDER_EGG'
+  lore:
+    - '&a&lMob Kill Collection Toggle'
+    - ''
+    - '&7This will toggle the &bMob Kill Collection &7feature.'
+    - ''
+    - '&8| &fToggled: &a&l%mob_collection%'
+    - ''
+    - '&8&o(( &7&oClick to toggle Mob Kill Collection&8&o ))'
+gui-toggle-mob-other:
+  material: 'PISTON'
+  lore:
+    - '&a&lMob Other Collection Toggle'
+    - ''
+    - '&7This will toggle the &bMob Other Collection &7feature.'
+    - ''
+    - '&8| &fToggled: &a&l%mob_other_collection%'
+    - ''
+    - '&8&o(( &7&oClick to toggle Mob Other Collection &8&o))'
+gui-toggle-furnace:
+  material: 'FURNACE'
+  lore:
+    - '&a&lFurnace Collection Toggle'
+    - ''
+    - '&7This will toggle the &bFurnace Collection &7feature.'
+    - ''
+    - '&8| &fToggled: &a&l%furnace_collection%'
+    - ''
+    - '&8&o(( &7&oClick to toggle Furnace Collection &8&o))'
+gui-toggle-crops:
+  material: 'WHEAT_SEED'
+  lore:
+    - '&a&lCrops Collection Toggle'
+    - ''
+    - '&7This will toggle the &bCrops Collection &7feature.'
+    - ''
+    - '&8| &fToggled: &a&l%crop_collection%'
+    - ''
+    - '&8&o(( &7&oClick to toggle Crops Collection &8&o))'
+gui-toggle-info:
+  material: 'ENCHANTED_BOOK'
+  lore:
+    - '&a&lCollections Toggle Info'
+    - ''
+    - '&c| &fAuto-Sell: &a%auto_sell_enabled%'
+    - '&c| &fBlock Collection: &a%block_collection%'
+    - '&c| &fMob by kill Collection: &a%mob_collection%'
+    - '&c| &fMob by other Collection: &a%mob_other_collection%'
+    - '&c| &fFurnace Collection: &a%furnace_collection%'
+    - '&c| &fCrop Collection: &a%crop_collection%'
+    - ''
+
+########################
+# GUI SETTINGS SECTION #
+########################
+# AVAILABLE PLACEHOLDERS FOR THIS SECTION
+# SAME AS MAIN MENU SECTION
+gui-settings-members:
+  material: 'COAL'
+  lore:
+    - '&a&lMember Filter'
+    - ''
+    - '&7This will open the &bMember Filter'
+    - '&7menu. Click the members you want to'
+    - '&7add/remove to the filter.'
+    - ''
+    - '&8(( &7&oClick to open the member filter menu &8&o))'
+gui-settings-collections:
+  material: 'IRON_INGOT'
+  lore:
+    - '&a&lCollection Systems'
+    - ''
+    - '&7This will open the &bCollection Systems'
+    - '&7menu. Click the systems you want to'
+    - '&7Toggle.'
+    - ''
+    - '&8&o(( &7&oClick to open the Collection Systems menu &8&o))'
+gui-settings-items:
+  material: 'GOLD_INGOT'
+  lore:
+    - '&a&lItem Filter'
+    - ''
+    - '&7This will open the &bItem Filter'
+    - '&7menu. Click the items you want to'
+    - '&7add to the filter.'
+    - ''
+    - '&8&o(( &7&oClick to open the item filter menu &8&o))'
+gui-settings-pickup:
+  material: 'TOTEM_OF_UNDYING'
+  lore:
+    - '&a&lPick up this UltraStorage'
+    - ''
+    - '&7This will pick up the &bUltraChest'
+    - '&7and place it in your inventory.'
+    - ''
+    - '&8&o(( &7&oClick to pick up UltraChest &8&o))'
+
+########################
+# GUI UPGRADES SECTION #
+########################
+# AVAILABLE PLACEHOLDERS FOR THIS SECTION
+# SAME AS MAIN MENU SECTION
+gui-upgrades-slot-item:
+  material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ4NmRiOWExNGQ1ODc5ZmEyODExZDMwMWNjYmQ1MjY5OTRmODcxMjQ3YjYyZjJkOWE0ODE4M2U5NjQxYWQ2OSJ9fX0='
+  lore:
+    - '&a&lUpgrade Slot Tier'
+    - ''
+    - '&8| &fCurrent Slot Tier: &a%current_upgrade_slot_tier%'
+    - '&8| &fCurrent Slot Value: &a%current_upgrade_slot_value%'
+    - ''
+    - '&8| &fNext Slot Tier: &a%next_upgrade_slot_tier%'
+    - '&8| &fNext Slot Value: &a%next_upgrade_slot_value%'
+    - '&8| &fPrice: &a%next_upgrade_slot_price%'
+    - '&8| &fPermission: &a%next_upgrade_slot_permission%'
+    - ''
+    - '&8&o(( &7&oClick to Purchase &8&o))'
+    - ''
+gui-upgrades-storage-item:
+  material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ4NmRiOWExNGQ1ODc5ZmEyODExZDMwMWNjYmQ1MjY5OTRmODcxMjQ3YjYyZjJkOWE0ODE4M2U5NjQxYWQ2OSJ9fX0='
+  lore:
+    - '&a&lUpgrade Storage Tier'
+    - ''
+    - '&8| &fCurrent Storage Tier: &a%current_upgrade_storage_tier%'
+    - '&8| &fCurrent Storage Value: &a%current_upgrade_storage_value%'
+    - ''
+    - '&8| &fNext Storage Tier: &a%next_upgrade_storage_tier%'
+    - '&8| &fNext Storage Value: &a%next_upgrade_storage_value%'
+    - '&8| &fPrice: &a%next_upgrade_storage_price%'
+    - '&8| &fPermission: &a%next_upgrade_storage_permission%'
+    - ''
+    - '&8&o(( &7&oClick to Purchase &8&o))'
+    - ''
+gui-upgrades-speed-item:
+  material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ4NmRiOWExNGQ1ODc5ZmEyODExZDMwMWNjYmQ1MjY5OTRmODcxMjQ3YjYyZjJkOWE0ODE4M2U5NjQxYWQ2OSJ9fX0='
+  lore:
+    - '&a&lUpgrade Speed Tier'
+    - ''
+    - '&8| &fCurrent Speed Tier: &a%current_upgrade_speed_tier%'
+    - '&8| &fCurrent Speed Value: &a%current_upgrade_speed_value%'
+    - ''
+    - '&8| &fNext Speed Tier: &a%next_upgrade_speed_tier%'
+    - '&8| &fNext Speed Value: &a%next_upgrade_speed_value%'
+    - '&8| &fPrice: &a%next_upgrade_speed_price%'
+    - '&8| &fPermission: &a%next_upgrade_speed_permission%'
+    - ''
+    - '&8&o(( &7&oClick to Purchase &8&o))'
+gui-upgrades-multiplier-item:
+  material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ4NmRiOWExNGQ1ODc5ZmEyODExZDMwMWNjYmQ1MjY5OTRmODcxMjQ3YjYyZjJkOWE0ODE4M2U5NjQxYWQ2OSJ9fX0='
+  lore:
+    - '&a&lUpgrade Multiplier Tier'
+    - ''
+    - '&8| &fCurrent Multiplier Tier: &a%current_upgrade_multiplier_tier%'
+    - '&8| &fCurrent Multiplier Value: &a%current_upgrade_multiplier_value%'
+    - ''
+    - '&8| &fNext Multiplier Tier: &a%next_upgrade_multiplier_tier%'
+    - '&8| &fNext Multiplier Value: &a%next_upgrade_multiplier_value%'
+    - '&8| &fPrice: &a%next_upgrade_multiplier_price%'
+    - '&8| &fPermission: &a%next_upgrade_multiplier_permission%'
+    - ''
+    - '&8&o(( &7&oClick to Purchase &8&o))'
+gui-upgrades-members-item:
+  material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ4NmRiOWExNGQ1ODc5ZmEyODExZDMwMWNjYmQ1MjY5OTRmODcxMjQ3YjYyZjJkOWE0ODE4M2U5NjQxYWQ2OSJ9fX0='
+  lore:
+    - '&a&lUpgrade Members Tier'
+    - ''
+    - '&8| &fCurrent Members Tier: &a%current_upgrade_members_tier%'
+    - '&8| &fCurrent Members Value: &a%current_upgrade_members_value%'
+    - ''
+    - '&8| &fNext Members Tier: &a%next_upgrade_members_tier%'
+    - '&8| &fNext Members Value: &a%next_upgrade_members_value%'
+    - '&8| &fPrice: &a%next_upgrade_members_price%'
+    - '&8| &fPermission: &a%next_upgrade_members_permission%'
+    - ''
+    - '&8&o(( &7&oClick to Purchase &8&o))'
+gui-upgrades-sell-quantity-item:
+  material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ4NmRiOWExNGQ1ODc5ZmEyODExZDMwMWNjYmQ1MjY5OTRmODcxMjQ3YjYyZjJkOWE0ODE4M2U5NjQxYWQ2OSJ9fX0='
+  lore:
+    - '&a&lUpgrade Sell-Quantity Tier'
+    - ''
+    - '&8| &fCurrent Sell-Quantity Tier: &a%current_upgrade_sell_quantity_tier%'
+    - '&8| &fCurrent Sell-Quantity Value: &a%current_upgrade_sell_quantity_value%'
+    - ''
+    - '&8| &fNext Sell-Quantity Tier: &a%next_upgrade_sell_quantity_tier%'
+    - '&8| &fNext Sell-Quantity Value: &a%next_upgrade_sell_quantity_value%'
+    - '&8| &fPrice: &a%next_upgrade_sell_quantity_price%'
+    - '&8| &fPermission: &a%next_upgrade_sell_quantity_permission%'
+    - ''
+    - '&8&o(( &7&oClick to Purchase &8&o))'

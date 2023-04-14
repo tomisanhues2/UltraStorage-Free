@@ -1,0 +1,43 @@
+#Create me 10 tiers of slot upgrades all with a value, price and permission node
+gui-upgrades-slot-tier-config:
+  1:
+    value: 1
+    price: 100
+    permission-node: 'upgrades.slot.tier.1'
+
+#Create me 10 tiers of storage upgrades all with a value, price and permission node
+gui-upgrades-storage-tier-config:
+  1:
+    value: 10000
+    price: 100
+    permission-node: 'upgrades.storage.tier.1'
+
+#Create me 10 tiers of speed upgrades all with a value, price and permission node
+#The value is speed in seconds. It should start at 120 and go down to 10
+gui-upgrades-speed-tier-config:
+  1:
+    value: 120
+    price: 100
+    permission-node: 'upgrades.speed.tier.1'
+#Create me 10 tiers of multiplier upgrades all with a value, price and permission node
+#The value is the multiplier. IT should start at 0.8 and go up to 3.0
+gui-upgrades-multiplier-tier-config:
+  1:
+    value: 0.8
+    price: 100
+    permission-node: 'upgrades.multiplier.tier.1'
+#Create me 10 tiers of members size upgrades all with a value, price and permission node
+#The value is the amount of members. It should start at 1 and go up to 10
+gui-upgrades-members-tier-config:
+  1:
+    value: 1
+    price: 100
+    permission-node: 'upgrades.members.tier.1'
+
+#Create me 10 tiers of sell quantity upgrades all with a value, price and permission node
+#The value is the amount of items that will be sold each time autosell is activated. It should start at 32 items and go up to 4 stacks.
+gui-upgrades-sell-quantity-tier-config:
+  1:
+    value: 32
+    price: 100
+    permission-node: 'upgrades.sell.quantity.tier.1'
